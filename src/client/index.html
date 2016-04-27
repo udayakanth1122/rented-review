@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html ng-app="serviceCatalog">
+
+<head>
+    <title>Angular2-Nodejs-Seed-Project</title>
+    <base href="/">
+    <!-- build:css({.tmp/serve,src/client}) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,src/client}) styles/app.css -->
+    <!-- inject:css -->
+    <!-- css files will be automatically insert here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+</head>
+
+<body class="body page-report">
+    <header class="header -light  -header-small cf" role="banner">
+        <div class="header__gradient -green-blue-gradient"></div>
+        <div class="header__content">
+            <a href="#">
+                <img src="dev_assets/images/logo.png" class="logo" alt="logo" />
+            </a>
+        </div>
+    </header>
+
+    <!-- Begin Section -->
+    <section class="section-main">
+        <div class="grid -grid-nopadding">
+            <div ui-view="" />
+        </div>
+    </section>
+    <!-- End Section -->
+
+    <!-- Begin Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="row">
+            <div class="col-md-6 footer-left-content">
+                <table class="table" align="center">
+                    <tr>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td rowspan="5" class="col-sm-1"></td>
+                        <td rowspan="5" class="col-md-8">
+                            <span class="footer-left-header">Join our mailing list</span>
+                            <br>
+                            <span class="footer-left-subheader">Sign up to receive emails of website updates and new cities being added. Enter your email address and we will notify you.</span>
+                            <br>
+
+                            <input class="form-control" placeholder="Email Address" type="text" />
+                        </td>
+                        <td rowspan="5" class="col-sm-1"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <table class="table">
+                    <tr>
+                        <td rowspan="5" class="col-md-1"></td>
+                        <td rowspan="5" class="col-md-3">
+                            <span class="footer-company">Company</span>
+                            <br>
+                            <a href="#">About</a>
+                            <br>
+                            <a href="#">Press</a>
+                            <br>
+                            <a href="#">Privacy Policy</a>
+                            <br>
+                            <a href="#">Terms & Conditions</a>
+                            <br>
+                            <a href="#">Disclaimers</a>
+                        </td>
+                        <td rowspan="5" class="col-md-3">
+                            <span class="footer-support">Support</span>
+                            <br>
+                            <a href="#">Help</a>
+                            <br>
+                            <a href="#">Contact Us</a>
+                            <br>
+                            <a href="#">Report an error</a>
+                            <br>
+                            <a href="#">Site Map</a>
+                        </td>
+                        <td rowspan="4" class="col-md-4 footer-address">
+                            <button class="btn btn-danger btn-round">
+                                <i class="fa fa-facebook"></i>
+                            </button>
+                            <button class="btn btn-danger btn-round">
+                                <i class="fa fa-twitter"></i>
+                            </button>
+                            <br> Rented Review
+                            <br>P.O. Box 340418
+                            <br> Los Angeles, CA 90034
+                            <br>USA
+                            <br>
+                            <span class="rr-email">info@rentedreview.com</span>
+                            <br>
+                            <span class="footer-copyright">&copy; 2016 Rented Review</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- build:js(src/client) scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- run `gulp inject` to automatically populate bower script dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp/serve,.tmp/partials,src/client}) scripts/app.js -->
+    <!-- inject:js -->
+    <!-- js files will be automatically insert here -->
+    <!-- endinject -->
+
+    <!-- inject:partials -->
+    <!-- angular templates will be automatically converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!--<div>
+  <button class="btn btn-success btn-add-service" ng-click="vm.saveCatalog(service.name, service.versions)">
+    open modal view
+  </button>
+  <div class="service-filter">
+    <input class="form-control service-filter-input" ng-model="vm.filter" placeholder="Filter Services" type="text"/>
+    <button class="btn btn-default service-filter-clear" ng-click="vm.clearFilter()">Clear</button>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-left">
+      <div class="row" ng-repeat="service in vm.services | filter:vm.filter">
+        <div class="panel panel-info">
+          <div class="panel-body">
+            <h2>
+              <a class="link-underline" ng-click="vm.viewDetails(service.title, service.versions)">
+                {{service.title}}
+              </a>
+              <span class="owner-name">({{service.owner}})</span>
+            </h2>
+            <div class="btn-toolbar btn-version">
+              <button class="btn btn-primary btn-sm" ng-disabled="!version.active" ng-repeat="version in service.versions" type="button" ui-sref="catalog.swagger({title: service.title, version: version.number})">
+                {{version.number}}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-right">
+      <div ui-view=""></div>
+    </div>
+  </div>
+</div>-->

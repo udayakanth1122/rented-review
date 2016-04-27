@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "0.10"
+sudo: required
+before_script:
+script:
+  - npm install -g bower
+  - npm install -g gulp
+  - npm install phantomjs
+  - npm install -g karma
+  - bower install
+  - gulp scripts
+  - gulp inject
+  - gulp build
+  - gulp test
+  - npm test
+branches:
+  only:
+    - master

@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "rootDir": "src/client/app",
+    "outDir": ".tmp/serve/app"
+  },
+  "filesGlob": [
+    "./typings/*.d.ts",
+    "src/client/app/**/*.ts"
+  ],
+  "files": [
+    "./typings/tsd.d.ts",
+    "src/client/app/catalog/catalog.controller.spec.ts",
+    "src/client/app/catalog/catalog.controller.ts",
+    "src/client/app/catalog/catalog.module.ts",
+    "src/client/app/catalog/catalog.route.ts",
+    "src/client/app/catalog/catalog.service.ts",
+    "src/client/app/catalog/catalogApiUrl.constant.ts",
+    "src/client/app/catalog/detailModal/detailModal.controller.spec.ts",
+    "src/client/app/catalog/detailModal/detailModal.controller.ts",
+    "src/client/app/catalog/detailModal/detailModal.service.spec.ts",
+    "src/client/app/catalog/detailModal/detailModal.service.ts",
+    "src/client/app/catalog/saveModal/saveModal.controller.spec.ts",
+    "src/client/app/catalog/saveModal/saveModal.controller.ts",
+    "src/client/app/catalog/saveModal/saveModal.service.spec.ts",
+    "src/client/app/catalog/saveModal/saveModal.service.ts",
+    "src/client/app/catalog/service.ts",
+    "src/client/app/catalog/swagger/swagger.controller.spec.ts",
+    "src/client/app/catalog/swagger/swagger.controller.ts",
+    "src/client/app/serviceCatalog.module.ts",
+    "src/client/app/serviceCatalog.route.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
+}

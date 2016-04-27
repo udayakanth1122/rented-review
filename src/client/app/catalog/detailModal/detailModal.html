@@ -1,0 +1,44 @@
+<div class="modal-header">
+  <h3 class="modal-title text-center">
+    {{vm.serviceName}} Details
+  </h3>
+</div>
+<div class="modal-body">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="text-center">Version</th>
+        <th class="text-center">Active</th>
+        <th class="text-center">Delete</th>
+        <th class="text-center">Download</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="version in vm.versions">
+        <td class="text-center">
+          <label>{{version.number}}</label>
+        </td>
+        <td class="text-center">
+          <input type="checkbox" ng-model="version.active" ng-click="vm.update(vm.serviceName, version.number, version.active)" />
+        </td>
+        <td class="text-center">
+          <a class="icon" ng-click="vm.confirm(version.number)">
+            <h3 class="glyphicon glyphicon-trash text-danger"></h3>
+          </a>
+        </td>
+        <td class="text-center">
+          <a class="icon" ng-click="vm.download(vm.serviceName, version.number)">
+            <h3 class="glyphicon glyphicon-download-alt text-success"></h3>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="modal-footer">
+  <div class="alert alert-warning" ng-show="vm.confirmDelete" role="alert">
+    Are you sure you want to delete version {{vm.version}}?
+  </div>
+  <button class="btn btn-warning" ng-click="vm.delete(vm.serviceName, vm.version)" ng-show="vm.confirmDelete" type="button">Confirm</button>
+  <button class="btn btn-default" ng-click="vm.close()" type="button">Cancel</button>
+</div>
