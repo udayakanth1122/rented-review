@@ -1327,7 +1327,7 @@ th, td {
 }
 @media all and (min-width:46.8em) {
     .header.-header-small .header__gradient {
-        height: 60px
+        height: 80px
     }
     .header.-header-small .header__content-right {
         padding: 0;
@@ -1336,12 +1336,12 @@ th, td {
     .header.-header-small .header__content {
         height: 60px;
         width: 100%;
-        margin: -72px auto auto 6%;
+        margin: -90px auto auto 6%;
         background-color: transparent;
         border: none;
     }
     .header.-header-small .logo {
-        margin: .4rem .3rem .3rem 0
+        margin: 0rem .3rem .3rem 0
     }
 }
 .user-container {
@@ -2387,7 +2387,7 @@ ul.tabs__ul {
 }
 @media only screen and (min-width:48em) {
     .section-main {
-        margin-top: -40px
+        margin-top: -42px
     }
 }
 .section-actions {
