@@ -19,11 +19,41 @@
 
 <body class="body page-report">
     <header class="header -light  -header-small cf" role="banner">
-        <div class="header__gradient -green-blue-gradient"></div>
+        <div class="header__gradient -red-background"></div>
         <div class="header__content">
             <a href="#">
                 <img src="dev_assets/images/logo.png" class="logo" alt="logo" />
             </a>
+            <nav class="responsive-nav cf" id="js-responsive-nav">
+                <ul class="responsive-nav__list">
+
+                    <li class="responsive-nav__item">
+                        <a href="#" class="responsive-nav__link">
+                            <button href="#" class="button -button-header right"><i class="icon-printer"></i></button><span>Print Report</span></a>
+                    </li>
+                    <li class="responsive-nav__item">
+                        <a href="#/kpiTree" class="responsive-nav__link" title="KPI Tree">
+                            <button href="#" class="button -button-header right"><i class="icon-tree"></i></button><span>KPI Tree</span></a>
+                    </li>
+                    <li class="responsive-nav__item">
+                        <a href="#/hcPie" class="responsive-nav__link" title="HighCharts Pie">
+                            <button href="#" class="button -button-header right"><i class="icon-chart-alt"></i></button><span>HighCharts Pie</span></a>
+                    </li>
+                    <li class="responsive-nav__item">
+                        <a href="#" class="responsive-nav__link">
+                            <button href="#" class="button -button-header right"><i class="icon-question"></i></button><span>Help</span></a>
+                    </li>
+                    <li class="responsive-nav__item">
+                        <a href="#" class="responsive-nav__link"><span>Settings</span></a>
+                    </li>
+                    <li class="responsive-nav__item">
+                        <a href="#" class="responsive-nav__link"><span>Logout</span></a>
+                    </li>
+                </ul>
+                <button class="c-hamburger c-hamburger--htra" id="js-responsive-nav__hamburger">
+                    <span>toggle menu</span>
+                </button>
+            </nav>
         </div>
     </header>
 
@@ -44,22 +74,25 @@
                         <th></th>
                     </tr>
                     <tr>
-                        <td rowspan="5" class="col-sm-1"></td>
+                        <td rowspan="5" class="col-xs-1"></td>
                         <td rowspan="5" class="col-md-8">
                             <span class="footer-left-header">Join our mailing list</span>
                             <br>
                             <span class="footer-left-subheader">Sign up to receive emails of website updates and new cities being added. Enter your email address and we will notify you.</span>
                             <br>
-                            <input class="form-control" placeholder="Email Address" type="text" />
+                            <div class="right-inner-addon ">
+                                <i class="icon-angle-right"></i>
+                                <input class="form-control" placeholder="Email Address" />
+                            </div>
                         </td>
                         <td rowspan="5" class="col-sm-1"></td>
                     </tr>
                 </table>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 footer-right-content">
                 <table class="table">
                     <tr>
-                        <td rowspan="5" class="col-md-1"></td>
+                        <td rowspan="5" class="col-xs-1"></td>
                         <td rowspan="5" class="col-md-3">
                             <span class="footer-company">Company</span>
                             <br>
@@ -87,10 +120,10 @@
                         <td rowspan="4" class="col-md-4 footer-address">
                             <button class="btn btn-danger btn-round">
                                 <i class="fa fa-facebook"></i>
-                            </button>
+                            </button>&nbsp;
                             <button class="btn btn-danger btn-round">
                                 <i class="fa fa-twitter"></i>
-                            </button>
+                            </button><br>
                             <br> Rented Review
                             <br>P.O. Box 340418
                             <br> Los Angeles, CA 90034
