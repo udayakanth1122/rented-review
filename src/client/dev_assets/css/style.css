@@ -2,8 +2,10 @@
     font-family: "Bariol Regular Webfont";
     src: url("../fonts/text/bariol_regular-webfont.eot?#iefix") format("eot"), url("../fonts/text/bariol_regular-webfont.svg") format("svg"), url("../fonts/text/bariol_regular-webfont.ttf") format("ttf"), url("../fonts/text/bariol_regular-webfont.woff") format("woff"), url("../fonts/text/bariol_regular-webfont.woff2") format("woff2");
 }
-.-green-blue-gradient, .-green-blue-gradient-full, .responsive-nav__list {
+.-red-background, .responsive-nav__list {
     background: url("../images/separator.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#02ae5d', endColorstr='#008fca', GradientType=1)
 }
 .-blue-pink-gradient, .-blue-pink-gradient-full {
@@ -83,9 +85,13 @@ span.footer-copyright {
     font-size: 12px;
     color: #999999
 }
-
 .footer-left-content {
--webkit-box-shadow: 10px 0px 5px -10px #d7d7d7 ;
+    -webkit-box-shadow: 10px 0px 5px -10px #d7d7d7;
+}
+@media all and (max-width:48em) {
+    .hide-small {
+        display: none
+    }
 }
 .cf, .l-two-col, [role=main] {
     *zoom: 1
@@ -1329,8 +1335,10 @@ th, td {
     }
     .header.-header-small .header__content {
         height: 60px;
-        width: 100px;
-        margin: -42px auto auto 20px
+        width: 100%;
+        margin: -72px auto auto 6%;
+        background-color: transparent;
+        border: none;
     }
     .header.-header-small .logo {
         margin: .4rem .3rem .3rem 0
@@ -1360,24 +1368,22 @@ th, td {
     text-align: center;
     box-shadow: inset 0 0 175px 16px rgba(0, 0, 0, .35)
 }
-.header__gradient.-blue-pink-gradient {
-    background-image: url(../images/footer-map-blue-pink-small.jpg)
-}
 @media all and (min-width:46.8em) {
     .header__gradient {
-        height: 90px
+        height: auto
     }
 }
 .logo {
     float: left;
-    max-width: 5rem;
+    max-width: 30rem;
     margin: 1rem;
     border: none;
     outline: 0
 }
 @media all and (min-width:46.8em) {
     .logo {
-        max-width: 7rem
+        width: 100%;
+        height: auto;
     }
 }
 .page-title {
@@ -1721,7 +1727,8 @@ circle {
     .responsive-nav__item {
         display: inline-block;
         border-top: none;
-        float: left
+        float: left;
+        background-color: transparent;
     }
 }
 .responsive-nav__link {
@@ -1763,7 +1770,7 @@ circle {
         display: none
     }
     .responsive-nav__link button, .responsive-nav__link i {
-        display: inline-block
+        display: inline-block;
     }
 }
 #js-responsive-nav__hamburger {
@@ -2022,6 +2029,9 @@ circle {
 .icon-question:before {
     content: "\f128"
 }
+.icon-chevron-right:before {
+    content: "\f054";
+}
 .button {
     display: inline-block;
     background: #008FCA;
@@ -2069,8 +2079,8 @@ circle {
     padding: .3em .6em;
     min-width: 40px;
     font-size: 1.3em;
-    background-color: #fff;
-    color: #008FCA;
+    background-color: transparent;
+    color: #ffffff;
     border-right: 1px solid #DFE4E6
 }
 .-button-large.-button-full {
@@ -2377,7 +2387,7 @@ ul.tabs__ul {
 }
 @media only screen and (min-width:48em) {
     .section-main {
-        margin-top: 10px
+        margin-top: -40px
     }
 }
 .section-actions {
@@ -3257,4 +3267,17 @@ ul.tabs__ul {
 }
 .btn-add-service {
     margin-left: 0px;
+}
+.right-inner-addon {
+    position: relative;
+}
+.right-inner-addon input {
+    padding-right: 30px;
+}
+.right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 0px 12px;
+    pointer-events: none;
+    font-size: 30px;
 }
