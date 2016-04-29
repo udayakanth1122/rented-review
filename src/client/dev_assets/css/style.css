@@ -1761,16 +1761,21 @@ circle {
     }
 }
 @media screen and (min-width:46.8em) {
-    .responsive-nav__link {
+    .responsive-nav__link  {
         color: #fff;
         border: none;
-        padding: 0
+        padding-right: 40px;
+        font-size: 20px;
+        border-right: 1px solid #fff;
     }
     .responsive-nav__link span {
         display: none
     }
     .responsive-nav__link button, .responsive-nav__link i {
         display: inline-block;
+    }
+    .login {
+      border: none;
     }
 }
 #js-responsive-nav__hamburger {
@@ -3275,6 +3280,24 @@ ul.tabs__ul {
     padding-right: 30px;
 }
 .right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 0px 12px;
+    pointer-events: none;
+    font-size: 30px;
+}
+
+.search-right-inner-addon {
+    position: relative;
+}
+.search-right-inner-addon input {
+    padding-left: 30px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    width:430px,
+    height:60px
+}
+.search-right-inner-addon i {
     position: absolute;
     right: 0px;
     padding: 0px 12px;
