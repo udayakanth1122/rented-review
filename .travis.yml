@@ -1,9 +1,16 @@
 language: node_js
 node_js:
-- '0.10'
+- '4.0'
+- '4.1'
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
 sudo: required
-
-install:
+before_script:
+script:
 - npm install -g bower
 - npm install -g gulp
 - npm install phantomjs
@@ -13,9 +20,6 @@ install:
 - gulp inject
 - gulp test
 - gulp build
-before_script:
-script:
-
 branches:
   only:
   - dev
