@@ -25,7 +25,7 @@ script:
 - gulp build
 branches:
   only:
-  - master
+  - dev
 #deploy:
 #  app: rented-review
 #  provider: heroku
