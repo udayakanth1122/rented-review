@@ -4,13 +4,14 @@ node_js:
 sudo: required
 
 install:
+
+before_script:
+script:
 - npm install -g bower
 - npm install -g gulp
 - npm install phantomjs
 - npm install -g karma
 - bower install --allow-root
-before_script:
-script:
 - gulp scripts
 - gulp inject
 - gulp test
