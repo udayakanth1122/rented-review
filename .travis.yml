@@ -27,6 +27,8 @@ after_script:
   - gem install heroku
   # Add your Heroku git repo:
   - git remote add heroku git@heroku.com:rented-review.git
+  # Add your Heroku API key:
+  - export HEROKU_API_KEY=$HEROKU_API_KEY
   # Turn off warnings about SSH keys:
   - echo "Host heroku.com" >> ~/.ssh/config
   - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
