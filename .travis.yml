@@ -23,11 +23,18 @@ script:
 branches:
   only:
   - dev
+after_success:
+  # push compiled TS to test folder in git for reference in coveralls
+  - cd dist
+  - git init
+  - git add .
+  - git commit -m "my first commit"
+  - heroku create rented-review
+  - git remote -v
+  - heroku git:remote -a rented-review
 deploy:
   app: rented-review
   provider: heroku
   api_key:
     secure: r+0C1A42L+BvEigJiVVU73q7daaY372yQgQHawYi82Ysa3Vq0b8/z2Jqkav7Zwvjc5Lj5yfsg7mDaBUo+/IAUJiyvzXKasMh141V1SrEJ/E7d72GOYotJIuvluQGDjKE9t0E1isJRbd0XcshzjMfwVXHdxSqiIl/gBPH0xB0DUyPrVA32JEu2GKDln5PQNMCoSrvReiaaAJ+AP5PUoUx2ieQBnWjn1cDVzn/dKb4OlvBwRHWrzLdROT5bVqy3WqZCssKFCQShBtmgKKYOixkT3yuUWd/x74HouT3n3vVoIsUph2Z8miN+UyayO9S3vUc3MDNfIem9wuuDkHkZGUC1azudmQ4msAHt1rsSN5AiNyHEDLufwhBxg/EWGAjBwxD+X/o5qTH7d5Eq4oPEexpYcJfp6qH05VyYe5QMqxOBliIp2ask4wiYlPEHQRX6wCKP+3VDPc2qpYoQe7WMOwEh/HxNGkjmLKJNkt7Nil1cQlkpGMWAnmD8vn1geApkEPgOn8LVjG1+uAXuMH111gXyw1haR4WLIYtsRhBMifb94yVG85SwOe2O6rtv/AdnBOp9ZfBRKU+B+gjtWY89/WSDTD5XOvRCfEHc7IXqNzzEiqJFAdpyF28MErvVcaPyA36gxc8P7MDmKuKmkn4bthLRNKe63F9TmfK8qCvHndO308=
-  on: dev
-  run:
-    - "heroku ps:scale web=1"
+  strategy: git
