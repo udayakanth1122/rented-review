@@ -27,8 +27,6 @@ after_script:
   - gem install heroku
   # Add your Heroku git repo:
   - git remote add heroku git@heroku.com:rented-review.git
-  # Add your Heroku API key:
-  - export HEROKU_API_KEY=$HEROKU_API_KEY
   # Turn off warnings about SSH keys:
   - echo "Host heroku.com" >> ~/.ssh/config
   - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
@@ -43,6 +41,7 @@ after_script:
   - git add .
   - git -c user.name='travis' -c user.email='travis@travis-ci.org' commit -m "my first commit"
   - heroku create rented-review
+  - git remote -v
   - heroku git:remote -a rented-review
   # Push to Heroku!
   - yes | git push heroku master
