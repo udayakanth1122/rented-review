@@ -25,6 +25,7 @@ branches:
 after_script:
   # Install the Heroku gem (or the Heroku toolbelt)
   - gem install heroku
+  - travis encrypt HEROKU_API_KEY=$HEROKU_API_KEY --add
   # Add your Heroku git repo:
   - git remote add heroku git@heroku.com:rented-review.git
   # Add your Heroku API key:
