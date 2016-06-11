@@ -22,22 +22,22 @@ script:
 branches:
   only:
   - dev
-after_success:
-- cd dist
-- git init
-- git add .
-- git config --global user.email "udayakanth.sripada@gmail.com"
-- git config --global user.name "udayakanth1122"
-- git commit -m "my first commit"
-- git remote -v
-- heroku git:remote -a rented-review
+# after_success:
+# - cd dist
+# - git init
+# - git add .
+# - git config --global user.email "udayakanth.sripada@gmail.com"
+# - git config --global user.name "udayakanth1122"
+# - git commit -m "my first commit"
+# - git remote -v
+# - heroku git:remote -a rented-review
 deploy:
   provider: heroku
   api_key:
     secure: Xs9qPT1YtpRTzH9GhZITzIldkdf7G20Wu/XrRFLZ6G8BSRl4MLKOS9ZWOp4PVmVXsJRQ+jFDR6m1PrRxlhltTk/SZI7yQ6eze0cJXOqwClPBxeUUStVtZi9vL9up0x1N2Yue6kHtwVr3cnBI3OqzekuHH7SCRaVeM644kqLLHsQljnjpkx11ctrpPW5GhM5G+xQY8UJfH0yuzFaK5XkdEEPX80oqyPVW0/NWypGbz+2Cvk0z158pxwwgaPhC/7MAjpkOzVF3Lh5YZtNniT538ZT0B/NQ7sL4HVjYCUZweMgkvwWyN5sKniUrwmiX3rJAvLh0m22ExFz+09ddG29wDtmu9dpelLGItT0u0D3OPrRB9yW+eW2S8j5mSnSO3oz62yRh1WNOEwW2tVSgXhZtuRF7oNyaby1pD/exp5CC6psuDqmrIjXqYgU9u4rjcdJjnvisaD7NWG3aCqAbdGx0kElgB+Ws2GRto3HeZcZ5B4HJcVAevW+1/O5b9MnOGJYSTEbxfrs6STgeK/rzF+C3wdUuOt2Ma1rXq/hVHOu8afWL1d8h78yZc/u83jmDnTjfMGHSIaCyUB1MTnKlxbB0zGV+XWsFDq4uOcD15fjthZhu8SibreBqX6W93MVyE87dw08g5sBbzoViIR3K3KMnrTTZXY0hDEZZVC3yl1wmaCM=
   app: rented-review
   on:
-    repo: udayakanth1122/rented-review
+    repo: udayakanth1122/rented-review/dist
     branch: dev
-  run:
-    - git:remote -a rented-review
+  # run:
+  #   - git:remote -a rented-review
