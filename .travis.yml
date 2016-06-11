@@ -22,7 +22,7 @@ script:
 branches:
   only:
   - dev
-after_script:
+before_deploy:
 - gem install heroku
 - git remote add heroku git@heroku.com:rented-review.git
 - export HEROKU_API_KEY=d606082f-7673-4959-90b4-6cc33a6032e9
