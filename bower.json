@@ -31,7 +31,9 @@
     },
     "font-awesome": {
       "main": [
-        "css/font-awesome.min.css"
+        "css/font-awesome.min.css",
+        "fonts/fontawesome-webfont.ttf",
+        "fonts/fontawesome-webfont.woff"
       ]
     }
   },
