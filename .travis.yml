@@ -36,6 +36,7 @@ before_deploy:
 - git init
 - git add .
 - git -c user.name='travis' -c user.email='travis@travis-ci.org' commit -m "my first commit"
+- heroku apps:destroy --app rented-review --confirm rented-review
 - heroku create rented-review
 - git remote -v
 - heroku git:remote -a rented-review
