@@ -1337,7 +1337,7 @@ th, td {
     .header.-header-small .header__content {
         height: 60px;
         width: 100%;
-        margin: -90px auto auto 6%;
+        margin: -90px auto auto 0%;
         background-color: transparent;
         border: none;
     }
@@ -1386,6 +1386,7 @@ th, td {
     .logo {
         max-width: 100%;
         height: auto;
+        padding-left: 9%;
     }
 }
 .page-title {
