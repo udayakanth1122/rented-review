@@ -1255,7 +1255,6 @@ th, td {
     background-color: #F3F4F4
 }
 .header.-light .header__content {
-    max-width: 1280px;
     margin: -74px auto auto;
     background-color: #fff;
     border-bottom: 3px solid #DFE4E6;
@@ -1386,7 +1385,7 @@ th, td {
     .logo {
         max-width: 100%;
         height: auto;
-        padding-left: 9%;
+        padding-left: 6%;
     }
 }
 .page-title {
@@ -1594,7 +1593,27 @@ circle {
         height: auto;
         background: 0 0;
         color: #4D4845;
-        margin: .3rem 0
+        margin: .3rem 14rem
+    }
+
+    input.search-address{
+      border:1px solid #fff;
+      font-family: "Bariol Regular Webfont";
+      font-size: 16px;
+      background-color: transparent;
+      padding-left: 10px;
+      width: 280px;
+      height: 34px;
+      color: #ecc6bd;
+    }
+
+    .header-search i {
+      position: absolute;
+      right: 61rem;
+      padding: 5px 12px;
+      pointer-events: none;
+      font-size: 20px;
+      color: #fff
     }
 }
 .responsive-nav:after {
